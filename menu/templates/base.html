@@ -23,18 +23,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{% static 'css/theme.css' %}" rel="stylesheet" />
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+    <style>
+    .cart-card{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        height: 300px;
+        width: 400px;
+        overflow-y: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        background-color: #fff;
+        scrollbar-width: none;            
+    }
+    </style>
 </head>
 <body>
     <main class="main" id="top">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-            <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="/"><img class="d-inline-block me-3" src="static/img/icons/logo.png" alt="" />VOS Restaurant Assist</a>
+            <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="/"><img class="d-inline-block me-3" src="static/img/icons/logo.png" alt="" />VOS Restaurants</a>
                 <div class="collapse navbar-collapse border-lg-0 mt-4 mt-lg-0der-top " id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
                     <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Order Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Order Food</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+                    <li class="nav-item"><a class="btn btn-primary rounded-pill hover-top float-right" href="#cart" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="cart">Show Cart</a></li>
                     </ul>
                 </div>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
